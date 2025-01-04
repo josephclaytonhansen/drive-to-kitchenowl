@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <div style = "width: 100%;">
+        <h1 class = "fw-500">Recipes to KitchenOwl</h1>
+        <div id = "noItems" class = "d-none">
+            <h3 class = "fw-300">No ingredients found- export a household from KitchenOwl and import it</h3>
+            <input id = "" type="file" accept=".json" onchange="window.handleFileUpload(event)" />
+        </div>
+        <hr/>
+        <div id = "recipeArea" style = "display:flex; flex-direction: column; width: 100%; gap:1rem;">
+            <input id = "recipeName" placeholder="Enter recipe name"></input>
+            <textarea id = "recipeInput" style = "height:6rem" placeholder="Enter recipe here"></textarea>
+            <button id = "addRecipe" onclick="window.addRecipe()">Add Recipe</button>
+            <p>Ingredients to Categorize</p>
+            <ul id = "ingredientsToCategorize"></ul>
+        </div>
+        <hr/>
+        <div>
+            <button id = "export" onclick="window.exportJSON()">Export</button>
+        </div>
+    </div>
+    
+
+</html>

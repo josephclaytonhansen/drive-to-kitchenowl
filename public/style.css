@@ -1,0 +1,92 @@
+:root {
+    --white: hsl(54, 18%, 95%);
+    --gray: hsl(54, 18%, 80%);
+    --green: hsl(63, 35%, 45%);
+    --red: hsl(14, 67%, 44%);
+    --orange: hsl(38, 50%, 45%);
+    --dark-blue: #223E53;
+    --blue: #468295;
+    --light-blue: hsl(194, 35%, 54%);
+    --black: hsl(97, 9%, 20%);
+}
+
+hr {
+    border: none;
+    width: 100%;
+    border-top: 1px solid var(--gray);
+    margin: 2rem 0;
+}
+
+button {
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+button:hover,
+button:active,
+button:focus {
+    background-color: var(--dark-blue);
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('Heebo-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 300 500 700 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    padding: 2rem;
+    font-size: 1.25rem;
+    color: var(--black);
+    background-color: var(--white);
+    height:100vh;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
