@@ -17,12 +17,18 @@
             <input id = "" type="file" accept=".json" onchange="window.handleFileUpload(event)" />
         </div>
         <hr/>
-        <div id = "recipeArea" style = "display:flex; flex-direction: column; width: 100%; gap:1rem;">
-            <input id = "recipeName" placeholder="Enter recipe name"></input>
-            <textarea id = "recipeInput" style = "height:6rem" placeholder="Enter recipe here"></textarea>
-            <button id = "addRecipe" onclick="window.addRecipe()">Add Recipe</button>
+        <div id="recipeArea" style="display:flex; flex-direction: column; width: 100%; gap:1rem;">
+            <input id="recipeName" placeholder="Enter recipe name"></input>
+            <input id="recipePhoto" placeholder="Enter photo URL"></input>
+            <input id="recipeSource" placeholder="Enter source"></input>
+            <input id="recipeTime" type="number" placeholder="Enter time"></input>
+            <input id="recipeYields" type="number" placeholder="Enter yields"></input>
+            <input id="recipePrepTime" type="number" placeholder="Enter prep time"></input>
+            <input id="recipeCookTime" type="number" placeholder="Enter cook time"></input>
+            <textarea id="recipeInput" style="height:6rem" placeholder="Enter recipe here"></textarea>
+            <button id="addRecipe" onclick="window.addRecipe()">Add Recipe</button>
             <p>Ingredients to Categorize</p>
-            <ul id = "ingredientsToCategorize"></ul>
+            <ul id="ingredientsToCategorize"></ul>
         </div>
         <hr/>
         <div>

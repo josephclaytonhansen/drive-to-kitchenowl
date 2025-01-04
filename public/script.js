@@ -59,10 +59,10 @@ const parseLines = (text) => {
     }
 
     lines.forEach((line) => {
-        if (/\.\s|[^0-9]\./.test(line)) {
-            directions.push(line);
-        } else {
+        if (/^\d+(\.\d+)?\s*[a-zA-Z]+|[¼½¾⅓⅔⅛⅜⅝⅞]\s*[a-zA-Z]+/.test(line)) {
             ingredients.push(line);
+        } else {
+            directions.push(line);
         }
     });
 
@@ -147,15 +147,15 @@ window.addRecipe = () => {
     }
 
     const newRecipe = {
-        name: document.querySelector("#recipeName").value,
-        photo: "",
-        source: "",
+        name: document.querySelector("#recipeName").value || "",
+        photo: document.querySelector("#recipePhoto").value || "",
+        source: document.querySelector("#recipeSource").value || "",
         tags: [],
-        time: 1,
-        yields: 1,
-        prep_time: 0,
-        cook_time: 0,
-        items: ingredients,
+        time: document.querySelector("#recipeTime").value || 0,
+        yields: document.querySelector("#recipeYields").value || 0,
+        prep_time: document.querySelector("#recipePrepTime").value || 0,
+        cook_time: document.querySelector("#recipeCookTime").value || 0,
+        ingredients,
         description: directions.join(" ")
     };
 
